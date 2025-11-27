@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <title>Bruni's Board - 게시글 목록</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="../css/common.css" />
+<link rel="stylesheet" href="../css/posts.css" />
+</head>
+<body class="posts-page-body">
+  <!-- 상단 헤더 -->
+  <header class="top-header">
+    <div class="top-header-inner">
+      <a class="top-header-text" href="./posts.html">Bruni's Board</a>
+
+      <div class="top-header-profile" id="header-profile">
+        <img
+          src="./header-icon.png"
+          alt="프로필"
+          class="top-header-logo"
+          id="header-profile-img"
+        />
+        <span class="top-header-nickname" id="header-nickname">내 닉네임</span>
+      </div>
+
+      <!-- 프로필 드롭다운 메뉴 -->
+      <div class="profile-menu" id="profile-menu">
+        <button type="button" class="profile-menu-item" id="menu-edit-profile">
+          회원정보수정
+        </button>
+        <button type="button" class="profile-menu-item" id="menu-edit-password">
+          비밀번호수정
+        </button>
+        <button type="button" class="profile-menu-item" id="menu-logout">
+          로그아웃
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="posts-page">
+    <section class="posts-container">
+
+      <!-- 🔹 인사말: 중앙 정렬 + '게시판'만 볼드 -->
+      <header class="posts-intro">
+        <div class="posts-greeting">
+          <p class="posts-greeting-title">Welcome to <strong>Bruni's Board!</strong></p>
+        </div>
+
+        <!-- 게시글 작성 버튼 (오른쪽 정렬) -->
+        <button id="write-post-button" class="posts-write-btn">
+          게시글 작성
+        </button>
+      </header>
+
+      <!-- 게시글 카드 리스트 -->
+      <section id="posts-list" class="posts-list">
+        <!-- JS에서 카드들이 채워짐 -->
+      </section>
+
+      <!-- 로딩/마지막 안내 -->
+      <div id="posts-loading" class="posts-loading">
+        게시글을 불러오는 중입니다...
+      </div>
+      <div id="posts-end" class="posts-end" style="display:none;">
+        더 이상 게시글이 없습니다.
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/posts.js"></script>
+</body>
+</html>

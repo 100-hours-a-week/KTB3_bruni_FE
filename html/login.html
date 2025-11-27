@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <title>Bruni's Board - 로그인</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../css/common.css" />
+<link rel="stylesheet" href="../css/login.css" />
+
+</head>
+<body class="login-page-body">
+<header class="top-header">
+  <span class="top-header-text">Bruni's Board</span>
+</header>
+
+
+  <main class="login-page">
+    <section class="login-card">
+        <div class="login-hero">
+          <div class="login-avatar">
+          <img src="../image/login-avatar.png" alt="프로필 아이콘" />
+        </div>
+        <h1 class="login-title">WELCOME</h1>
+        <p class="login-subtitle">로그인 정보를 입력해주세요</p>
+      </div>
+
+      <form id="login-form" class="form" novalidate>
+        <!-- 이메일 -->
+        <div class="form-field">
+          <label for="email" class="sr-only">이메일</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="이메일"
+            autocomplete="username"
+          />
+          <p id="email-error" class="error" style="display:none;"></p>
+        </div>
+
+        <!-- 비밀번호 -->
+        <div class="form-field">
+          <label for="password" class="sr-only">비밀번호</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="비밀번호"
+            autocomplete="current-password"
+          />
+          <p id="password-helper" class="helper" style="display:none;"></p>
+          <p id="password-error" class="error" style="display:none;"></p>
+        </div>
+
+        <div class="login-actions">
+          <!-- 로그인 버튼 -->
+          <button id="login-button" type="submit" class="primary">
+            로그인
+          </button>
+
+          <!-- 회원가입 버튼 -->
+          <button type="button" id="signup-button" class="secondary">
+            회원가입
+          </button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="../js/login.js"></script>
+</body>
+</html>

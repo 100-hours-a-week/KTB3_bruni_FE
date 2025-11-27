@@ -1,0 +1,174 @@
+/* =========================
+   Signup Page Layout
+   ========================= */
+
+.signup-page {
+  min-height: calc(100vh - 104px);
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px 80px;
+  background: #e5f4ff;
+}
+
+.signup-container {
+  width: 480px;
+}
+
+/* 카드 */
+.signup-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px 32px 32px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* 제목 */
+.signup-title {
+  margin: 0 0 20px;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* =========================
+   Profile Section
+   ========================= */
+
+.profile-section {
+  margin-bottom: 24px;
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.profile-label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.profile-helper {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.profile-body {
+  display: flex;
+  justify-content: center;
+}
+
+/* 동그라미 프로필 */
+.profile-circle {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.profile-plus {
+  font-size: 32px;
+  color: #6b7280;
+}
+
+/* 이미지가 들어왔을 때 배경으로 표시 */
+.profile-circle.has-image {
+  background-size: cover;
+  background-position: center;
+}
+
+/* =========================
+   Form Fields
+   ========================= */
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-field label {
+  font-size: 14px;
+}
+
+.form-field input {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+.form-field input:focus {
+  outline: none;
+  border-color: #5bbcff;
+}
+
+/* helper text (기본 회색, 오류 시 빨간색) */
+.helper-text {
+  margin: 0;
+  font-size: 12px;
+  color: #6b7280;
+  display: none;
+}
+
+.helper-text.error {
+  color: #ff4e4e;
+  display: block;
+}
+
+/* =========================
+   Buttons
+   ========================= */
+
+.signup-button {
+  margin-top: 8px;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg, #74d7ff 0%, #3aa3ff 100%);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: not-allowed;
+  transition: transform 0.05s ease, filter 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 10px 24px rgba(63, 163, 255, 0.25);
+}
+
+.signup-button.enabled {
+  cursor: pointer;
+}
+
+.signup-button.enabled:hover {
+  filter: brightness(1.05);
+  box-shadow: 0 12px 28px rgba(63, 163, 255, 0.3);
+}
+
+.signup-button.enabled:active {
+  transform: translateY(1px);
+}
+
+/* 로그인하러 가기 버튼 */
+.go-login-button {
+  margin-top: 12px;
+  width: 100%;
+  padding: 8px 0;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  background-color: #ffffff;
+  font-size: 14px;
+}

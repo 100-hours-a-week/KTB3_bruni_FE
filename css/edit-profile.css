@@ -1,0 +1,230 @@
+/* 페이지 레이아웃 */
+.edit-profile-page {
+  background: #e5f4ff;
+}
+
+.edit-profile-main {
+  min-height: calc(100vh - 104px);
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px 80px;
+}
+
+.edit-profile-card {
+  width: 480px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.edit-profile-title {
+  margin: 0 0 24px;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* 프로필 섹션 */
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.profile-circle-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-circle {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.profile-circle-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #4b5563;
+  background: rgba(243, 244, 246, 0.8);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+/* 폼 공통 */
+.edit-profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-field label {
+  font-size: 14px;
+}
+
+.form-field input {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+.form-field input[readonly] {
+  background: #f9fafb;
+}
+
+.form-field input:focus {
+  outline: none;
+  border-color: #5bbcff;
+}
+
+.helper-text {
+  margin: 0;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.helper-text.error {
+  color: #ff4e4e;
+}
+
+/* 버튼들 */
+
+.profile-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.primary-button {
+  width: 100%;
+  padding: 12px 0;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(90deg, #74d7ff 0%, #3aa3ff 100%);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: not-allowed;
+  transition: transform 0.05s ease, filter 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 10px 24px rgba(63, 163, 255, 0.25);
+}
+
+.primary-button.enabled {
+  cursor: pointer;
+}
+
+.primary-button.enabled:hover {
+  filter: brightness(1.05);
+  box-shadow: 0 12px 28px rgba(63, 163, 255, 0.3);
+}
+
+.primary-button.enabled:active {
+  transform: translateY(1px);
+}
+
+.secondary-button {
+  width: 100%;
+  padding: 8px 0;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  background-color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.secondary-button:hover {
+  background-color: #f2f4f8;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* 회원탈퇴 모달 */
+
+.confirm-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 25;
+}
+
+.confirm-modal-overlay.open {
+  display: flex;
+}
+
+.confirm-modal {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px 28px;
+  width: 320px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.confirm-modal-title {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.confirm-modal-message {
+  margin: 0 0 20px;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.confirm-modal-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.modal-button {
+  flex: 1;
+  padding: 8px 0;
+  border-radius: 12px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.15s ease, box-shadow 0.15s ease, transform 0.05s ease;
+}
+
+.modal-button.cancel {
+  background: #111827;
+  color: #ffffff;
+}
+
+.modal-button.confirm {
+  background: linear-gradient(90deg, #74d7ff 0%, #3aa3ff 100%);
+  color: #ffffff;
+}
+
+.modal-button.confirm:hover {
+  filter: brightness(1.05);
+  box-shadow: 0 10px 22px rgba(63, 163, 255, 0.25);
+}
+
+.modal-button:active {
+  transform: translateY(1px);
+}

@@ -1,0 +1,151 @@
+/* =========================
+   Global Reset & Base
+   ========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  background-color: #e5f4ff;
+  color: #111827;
+}
+
+/* 공통 뒤로가기 버튼 (헤더 좌측) */
+.back-button-header {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* =========================
+   Top Header
+   ========================= */
+
+.top-header {
+  width: 100%;
+  height: 104px;
+  background-color: #F4F5F7;
+  border-bottom: 1px solid #000000;
+  position: relative;
+}
+
+/* 제목은 화면 정중앙 고정 */
+.top-header-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Nunito", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  color: #111111;
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* 프로필 이미지 — 오른쪽 끝 정렬 */
+.top-header-logo {
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+/* 공통 버튼 스타일 (기본) */
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* =========================
+   Header Profile Dropdown
+   ========================= */
+
+.profile-menu {
+  position: absolute;
+  top: 72px;
+  right: 24px;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  width: auto;
+  min-width: max-content;
+  background: #f4f5f7;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  display: none;
+  z-index: 20;
+}
+
+.profile-menu.open {
+  display: flex;
+}
+
+.profile-menu-item {
+  width: 100%;
+  padding: 8px 10px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-size: 14px;
+  font-family: "Nunito", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.profile-menu-item + .profile-menu-item {
+  border-top: 1px solid #e5e7eb;
+}
+
+.profile-menu-item:hover {
+  background: #e9e9e9; /* 요구사항 */
+}
+
+/* =========================
+   Toast
+   ========================= */
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 40px;
+  transform: translate(-50%, 8px);
+  background: linear-gradient(90deg, #74d7ff 0%, #3aa3ff 100%);
+  box-shadow: 0 10px 24px rgba(63, 163, 255, 0.25);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 30;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}

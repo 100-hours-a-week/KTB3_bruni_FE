@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <title>Bruni's Board - 게시글 상세</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../css/common.css" />
+  <link rel="stylesheet" href="../css/post.css" />
+</head>
+<body class="post-page">
+
+  <!-- 상단 공통 헤더 -->
+  <header class="top-header">
+    <button type="button" id="back-button" class="back-button-header">
+      ←
+    </button>
+    <a class="top-header-text" href="./posts.html">Bruni's Board</a>
+    <img
+      src="./header-icon.png"
+      alt="프로필"
+      class="top-header-logo"
+    />
+  </header>
+
+  <main class="post-main">
+    <section class="post-container">
+      <!-- 1. 제목 / 작성자 / 날짜 + 수정/삭제 -->
+      <header class="post-header">
+        <div class="post-title-block">
+          <h1 id="post-title" class="post-title"></h1>
+          <div class="post-meta">
+            <span id="post-author" class="post-author"></span>
+            <span id="post-date" class="post-date"></span>
+          </div>
+        </div>
+        <div class="post-actions">
+          <button id="post-edit-button" class="post-action-btn">수정</button>
+          <button id="post-delete-button" class="post-action-btn danger">삭제</button>
+        </div>
+      </header>
+
+      <!-- 이미지 (없으면 숨김) -->
+      <div class="post-image-wrapper" id="post-image-wrapper">
+        <img id="post-image" class="post-image" alt="게시글 이미지" />
+      </div>
+
+      <!-- 본문 -->
+      <div id="post-content" class="post-content"></div>
+
+      <!-- 3. 좋아요/조회수/댓글 수 -->
+      <section class="post-stats">
+        <button id="like-button" class="stat-button stat-like disabled">
+          <span id="like-count" class="stat-number">0</span>
+          <span class="stat-label">좋아요</span>
+        </button>
+        <div class="stat-box">
+          <span id="view-count" class="stat-number">0</span>
+          <span class="stat-label">조회수</span>
+        </div>
+        <div class="stat-box">
+          <span id="comment-count" class="stat-number">0</span>
+          <span class="stat-label">댓글</span>
+        </div>
+      </section>
+
+      <!-- 4. 댓글 입력 영역 -->
+      <section class="comment-write">
+        <textarea
+          id="comment-input"
+          class="comment-input"
+          placeholder="댓글을 남겨주세요!"
+        ></textarea>
+        <p id="comment-helper" class="comment-helper"></p>
+        <button
+          type="button"
+          id="comment-submit-button"
+          class="comment-submit-button"
+          disabled
+        >
+          댓글 등록
+        </button>
+      </section>
+
+      <!-- 댓글 리스트 -->
+      <section id="comment-list" class="comment-list">
+        <!-- JS에서 채움 -->
+      </section>
+    </section>
+  </main>
+
+  <!-- 🟣 공통 확인 모달 (게시글/댓글 삭제 둘 다 사용) -->
+  <div id="confirm-modal-overlay" class="modal-overlay">
+    <div class="modal">
+      <p id="modal-title" class="modal-title"></p>
+      <p id="modal-message" class="modal-message"></p>
+      <div class="modal-actions">
+        <button id="modal-cancel" class="modal-btn cancel">취소</button>
+        <button id="modal-confirm" class="modal-btn confirm">확인</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/post.js"></script>
+</body>
+</html>

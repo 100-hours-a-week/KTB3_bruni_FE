@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <title>Bruni's Board - 게시글 수정</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../css/common.css" />
+  <link rel="stylesheet" href="../css/make-post.css" />
+</head>
+<body class="make-post-page">
+  <!-- 상단 공통 헤더 + 뒤로가기 + 프로필 -->
+  <header class="top-header">
+    <button type="button" id="back-button" class="back-button-header">
+      ←
+    </button>
+    <a class="top-header-text" href="./posts.html">Bruni's Board</a>
+    <img
+      src="./header-icon.png"
+      alt="프로필"
+      class="top-header-logo"
+    />
+  </header>
+
+  <main class="write-page">
+    <section class="write-container">
+      <h1 class="write-title">게시글 수정</h1>
+
+      <form id="write-form" class="write-form" novalidate>
+        <!-- 1. 제목 (최대 26자) -->
+        <div class="form-field">
+          <label for="title">제목*</label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            placeholder="제목을 입력해주세요. (최대 26글자)"
+            maxlength="26"
+          />
+          <p class="helper-text" id="title-helper"></p>
+        </div>
+
+        <!-- 2. 내용 (LONGTEXT로 저장) -->
+        <div class="form-field">
+          <label for="content">내용*</label>
+          <textarea
+            id="content"
+            name="content"
+            placeholder="내용을 입력해주세요."
+            rows="10"
+          ></textarea>
+          <p class="helper-text" id="content-helper"></p>
+        </div>
+
+        <!-- 3. 이미지 업로드 영역 -->
+        <div class="form-field">
+          <p class="helper-text" id="form-helper"></p> <!-- * helper text 위치 -->
+          <label for="image">이미지</label>
+          <div class="image-input-row" id="image-click-area">
+            <input
+              type="file"
+              id="image"
+              name="image"
+              accept="image/*"
+              style="display:none"
+            />
+            <button type="button" class="image-select-button">
+              파일 선택
+            </button>
+            <span class="image-filename" id="image-filename">
+              파일을 선택해주세요.
+            </span>
+          </div>
+        </div>
+
+        <!-- 4. 완료 버튼 -->
+        <button
+          type="button"
+          id="submit-button"
+          class="write-submit-button"
+          disabled
+        >
+          수정 완료
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <script src="../js/post-edit.js"></script>
+</body>
+</html>
