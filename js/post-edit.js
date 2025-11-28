@@ -1,4 +1,3 @@
-const API_BASE_URL = "http://localhost:8080";
 
 window.addEventListener("DOMContentLoaded", () => {
   console.log("[post-edit] script loaded");

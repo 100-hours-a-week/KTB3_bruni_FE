@@ -1,5 +1,3 @@
-// ===== 설정 =====
-const API_BASE_URL = "http://localhost:8080"; // 필요하면 포트/도메인 수정
 
 // 페이지네이션 상태
 let currentPage = 0;

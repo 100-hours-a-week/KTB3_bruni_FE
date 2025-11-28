@@ -1,5 +1,4 @@
-// /js/make-post.js
-const API_BASE_URL = "http://localhost:8080";
+
 
 window.addEventListener("DOMContentLoaded", () => {
   console.log("[make-post] script loaded");

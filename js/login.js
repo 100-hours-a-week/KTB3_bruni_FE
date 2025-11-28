@@ -1,4 +1,3 @@
-const API_BASE_URL = "http://localhost:8080";
 
 // 이메일 유효성 검사
 function validateEmail(value) {
