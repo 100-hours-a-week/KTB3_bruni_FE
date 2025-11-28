@@ -23,11 +23,16 @@
     </div>
 
 <div style="text-align: left;"> 
-    <h2 style="border-bottom: 1px solid #d8dee4; color: #282d33;"> 🎥프로젝트 시연 </h2>  
-    <body>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/T9VYQ6cBi64?si=YAEdQ0bkAn9BCZeY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </body>
-    </div>
+  <h2 style="border-bottom: 1px solid #d8dee4; color: #282d33;"> 🎥프로젝트 시연 </h2>  
+
+  <div align="left">
+    
+  [![Bruni's Board 데모 영상](https://img.youtube.com/vi/T9VYQ6cBi64/0.jpg)](https://www.youtube.com/watch?v=T9VYQ6cBi64)
+  
+  </div>
+</div>
+
+
 
    
     
