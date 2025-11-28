@@ -166,9 +166,18 @@
 .go-login-button {
   margin-top: 12px;
   width: 100%;
-  padding: 8px 0;
-  border-radius: 10px;
+  padding: 10px 0;
+  border-radius: 12px;
   border: 1px solid #d1d5db;
   background-color: #ffffff;
   font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+  cursor: pointer;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.go-login-button:hover {
+  background-color: #f2f4f8;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }

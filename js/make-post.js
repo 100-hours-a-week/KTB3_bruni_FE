@@ -169,7 +169,7 @@ async function loadHeaderProfileImage() {
 
     // 로그인 안 됐거나(401), 이미지가 없거나(404) → 기본 아이콘 사용
     if (!res.ok) {
-      headerProfileImg.src = "./header-icon.png";
+      headerProfileImg.src = "../image/profile-default.png";
       return;
     }
 
@@ -178,6 +178,6 @@ async function loadHeaderProfileImage() {
     headerProfileImg.src = objectUrl;
   } catch (e) {
     console.error("[header] 프로필 이미지 로드 실패:", e);
-    headerProfileImg.src = "./header-icon.png";
+    headerProfileImg.src = "../image/profile-default.png";
   }
 }

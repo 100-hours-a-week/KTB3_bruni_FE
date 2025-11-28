@@ -311,7 +311,7 @@ function setPostActionsVisible(show) {
       const authorBlock = document.createElement("div");
       authorBlock.className = "comment-author-block";
       authorBlock.innerHTML = `
-        <div class="comment-avatar"></div>
+        <span class="comment-bullet">•</span>
         <span class="comment-author">${c.authorNickname ?? "익명"}</span>
         <span class="comment-date">${formatDateTime(c.createdAt)}</span>
       `;
@@ -575,7 +575,7 @@ async function loadHeaderProfileImage() {
     });
 
     if (!res.ok) {
-      headerProfileImg.src = "./header-icon.png";
+      headerProfileImg.src = "../image/profile-default.png";
       return;
     }
 
@@ -584,6 +584,6 @@ async function loadHeaderProfileImage() {
     headerProfileImg.src = objectUrl;
   } catch (e) {
     console.error("[header] 프로필 이미지 로드 실패:", e);
-    headerProfileImg.src = "./header-icon.png";
+    headerProfileImg.src = "../image/profile-default.png";
   }
 }

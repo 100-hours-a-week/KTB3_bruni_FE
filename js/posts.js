@@ -107,7 +107,7 @@ function createPostCard(post) {
   const avatarSrc =
     post.authorProfileImageUrl ||
     post.profileImageUrl ||
-    "./header-icon.png";
+    "../image/profile-default.png";
   const authorId =
     post.authorId ??
     post.author?.id ??
@@ -216,8 +216,8 @@ async function loadAuthorAvatar(authorId, imgEl) {
     });
 
     if (!res.ok) {
-      avatarCache.set(authorId, "./header-icon.png");
-      imgEl.src = "./header-icon.png";
+      avatarCache.set(authorId, "../image/profile-default.png");
+      imgEl.src = "../image/profile-default.png";
       return;
     }
 
@@ -227,8 +227,8 @@ async function loadAuthorAvatar(authorId, imgEl) {
     imgEl.src = objectUrl;
   } catch (e) {
     console.error("[posts] 작성자 프로필 이미지 로드 실패:", e);
-    avatarCache.set(authorId, "./header-icon.png");
-    imgEl.src = "./header-icon.png";
+    avatarCache.set(authorId, "../image/profile-default.png");
+    imgEl.src = "../image/profile-default.png";
   }
 }
 
@@ -243,7 +243,7 @@ async function loadHeaderProfileImageForElement(imgEl) {
     });
 
     if (!res.ok) {
-      imgEl.src = "./header-icon.png";
+      imgEl.src = "../image/profile-default.png";
       return;
     }
 
@@ -252,7 +252,7 @@ async function loadHeaderProfileImageForElement(imgEl) {
     imgEl.src = url;
   } catch (e) {
     console.error("[header] 프로필 이미지 로드 실패:", e);
-    imgEl.src = "./header-icon.png";
+    imgEl.src = "../image/profile-default.png";
   }
 }
 

@@ -180,7 +180,7 @@ async function loadHeaderProfileImage() {
     });
 
     if (!res.ok) {
-      headerProfileImg.src = "./header-icon.png";
+      headerProfileImg.src = "../image/profile-default.png";
       return;
     }
 
@@ -189,6 +189,6 @@ async function loadHeaderProfileImage() {
     headerProfileImg.src = objectUrl;
   } catch (e) {
     console.error("[header] 프로필 이미지 로드 실패:", e);
-    headerProfileImg.src = "./header-icon.png";
+    headerProfileImg.src = "../image/profile-default.png";
   }
 }

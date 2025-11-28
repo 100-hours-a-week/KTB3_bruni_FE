@@ -270,22 +270,22 @@ window.addEventListener("DOMContentLoaded", () => {
 
 async function loadHeaderProfileImageForElement(imgEl) {
   try {
-    const res = await fetch(`${API_BASE_URL}/api/users/me/profile-image`, {
-      method: "GET",
-      credentials: "include",
-    });
+      const res = await fetch(`${API_BASE_URL}/api/users/me/profile-image`, {
+        method: "GET",
+        credentials: "include",
+      });
 
-    if (!res.ok) {
-      imgEl.src = "./header-icon.png";
-      return;
-    }
+      if (!res.ok) {
+        imgEl.src = "../image/profile-default.png";
+        return;
+      }
 
     const blob = await res.blob();
     const url = URL.createObjectURL(blob);
     imgEl.src = url;
   } catch (e) {
     console.error("[header] 프로필 이미지 로드 실패:", e);
-    imgEl.src = "./header-icon.png";
+    imgEl.src = "../image/profile-default.png";
   }
 }
 
