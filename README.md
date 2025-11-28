@@ -21,5 +21,13 @@
     <h2 style="border-bottom: 1px solid #d8dee4; color: #282d33;"> 🌈프로젝트 소개 </h2>  
     <div style="font-weight: 700; font-size: 15px; text-align: left; color: #282d33;"> Bruni's Board 는 오픈 커뮤니티 웹 애플리케이션입니다. 누구나 글과 사진을 통해 공유하고 이야기를 나눌 수 있는 서비스입니다. </div> 
     </div>
-    
+
+<div style="text-align: left;"> 
+    <h2 style="border-bottom: 1px solid #d8dee4; color: #282d33;"> 🎥프로젝트 시연 </h2>  
+    <body>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/T9VYQ6cBi64?si=YAEdQ0bkAn9BCZeY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </body>
+    </div>
+
+   
     
